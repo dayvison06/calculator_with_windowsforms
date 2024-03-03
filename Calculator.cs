@@ -48,6 +48,7 @@ namespace Calculator
             if (txtNumber1.Text == string.Empty || txtNumber2.Text == string.Empty)
             {
                 MessageBox.Show("Preencha os campos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Console.WriteLine();
             }
             else { 
 
