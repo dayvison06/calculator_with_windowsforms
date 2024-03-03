@@ -6,6 +6,7 @@ namespace Calculator
     {
         public Calculator()
         {
+            
             InitializeComponent();
         }
 
@@ -43,28 +44,47 @@ namespace Calculator
 
         private void btnResult_Click(object sender, EventArgs e)
         {
-            int n1 = int.Parse(txtNumber1.Text);
-            int n2 = int.Parse(txtNumber2.Text);
 
-
-            if (btnPlus.BackColor == Color.White)
+            if (txtNumber1.Text == string.Empty || txtNumber2.Text == string.Empty)
             {
-                txtResult.Text = Sum(n1, n2).ToString();
-
-            } else if (btnLess.BackColor == Color.White)
-            {
-                txtResult.Text = Less(n1, n2).ToString();
-
-            }else if(btnCross.BackColor == Color.White)
-            {
-                txtResult.Text = Cross(n1, n2).ToString();
-
-            }else if(btnDivision.BackColor == Color.White)
-            {
-                txtResult.Text = Division(n1, n2).ToString();
+                MessageBox.Show("Preencha os campos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else { 
 
-            
+            try
+            {
+                
+                int n1 = int.Parse(txtNumber1.Text);
+                int n2 = int.Parse(txtNumber2.Text);
+
+
+                if (btnPlus.BackColor == Color.White)
+                {
+                    txtResult.Text = Sum(n1, n2).ToString();
+
+                }
+                else if (btnLess.BackColor == Color.White)
+                {
+                    txtResult.Text = Less(n1, n2).ToString();
+
+                }
+                else if (btnCross.BackColor == Color.White)
+                {
+                    txtResult.Text = Cross(n1, n2).ToString();
+
+                }
+                else if (btnDivision.BackColor == Color.White)
+                {
+                    txtResult.Text = Division(n1, n2).ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+                
+            }
+            }
         }
 
         public int Sum(int num1, int num2)
