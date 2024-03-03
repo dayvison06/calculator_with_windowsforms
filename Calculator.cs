@@ -1,3 +1,4 @@
+using System.Data;
 using System.Reflection;
 
 namespace Calculator
@@ -6,110 +7,104 @@ namespace Calculator
     {
         public Calculator()
         {
-            
+
             InitializeComponent();
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            btnDivision.BackColor = Color.FromArgb(125, 217, 88);
-            btnLess.BackColor = Color.FromArgb(125, 217, 88);
-            btnCross.BackColor = Color.FromArgb(125, 217, 88);
-            btnPlus.BackColor = Color.White;
+
+            Button btn = (Button)sender;
+            txtPanel.Text += btn.Text;
         }
 
         private void btnDivision_Click(object sender, EventArgs e)
         {
-            btnPlus.BackColor = Color.FromArgb(125, 217, 88);
-            btnLess.BackColor = Color.FromArgb(125, 217, 88);
-            btnCross.BackColor = Color.FromArgb(125, 217, 88);
-            btnDivision.BackColor = Color.White;
+            Button btn = (Button)sender;
+            txtPanel.Text += btn.Text;
         }
 
         private void btnLess_Click(object sender, EventArgs e)
         {
-            btnPlus.BackColor = Color.FromArgb(125, 217, 88);
-            btnDivision.BackColor = Color.FromArgb(125, 217, 88);
-            btnCross.BackColor = Color.FromArgb(125, 217, 88);
-            btnLess.BackColor = Color.White;
+            Button btn = (Button)sender;
+            txtPanel.Text += btn.Text;
         }
 
         private void btnCross_Click(object sender, EventArgs e)
         {
-            btnPlus.BackColor = Color.FromArgb(125, 217, 88);
-            btnLess.BackColor = Color.FromArgb(125, 217, 88);
-            btnDivision.BackColor = Color.FromArgb(125, 217, 88);
-            btnCross.BackColor = Color.White;
+            txtPanel.Text += "*";
+
         }
 
         private void btnResult_Click(object sender, EventArgs e)
         {
 
-            if (txtNumber1.Text == string.Empty || txtNumber2.Text == string.Empty)
-            {
-                MessageBox.Show("Preencha os campos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Console.WriteLine();
-            }
-            else { 
+            // O método DataTable.Compute permite avaliar as expressões matemáticas e retornar seu resultao.
+            
+            var result = new DataTable().Compute(txtPanel.Text, null);
+            txtPanel.Text = result.ToString();
 
-            try
-            {
-                
-                int n1 = int.Parse(txtNumber1.Text);
-                int n2 = int.Parse(txtNumber2.Text);
-
-
-                if (btnPlus.BackColor == Color.White)
-                {
-                    txtResult.Text = Sum(n1, n2).ToString();
-
-                }
-                else if (btnLess.BackColor == Color.White)
-                {
-                    txtResult.Text = Less(n1, n2).ToString();
-
-                }
-                else if (btnCross.BackColor == Color.White)
-                {
-                    txtResult.Text = Cross(n1, n2).ToString();
-
-                }
-                else if (btnDivision.BackColor == Color.White)
-                {
-                    txtResult.Text = Division(n1, n2).ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-
-                Console.WriteLine(ex.Message);
-                
-            }
-            }
         }
 
-        public int Sum(int num1, int num2)
+        private void Nb1_Click(object sender, EventArgs e)
         {
-            int result = num1 + num2;
-            return result;
+            Button btn = (Button)sender;
+            txtPanel.Text += btn.Text;
         }
 
-        public int Less(int num1, int num2)
+        private void Nb2_Click(object sender, EventArgs e)
         {
-            int result = num1 - num2;
-            return result;
+
+            Button btn = (Button)sender;
+            txtPanel.Text += btn.Text;
+
         }
 
-        public int Cross(int num1, int num2)
+        private void Nb3_Click(object sender, EventArgs e)
         {
-            int result = num1 * num2;
-            return result;
+            Button btn = (Button)sender;
+            txtPanel.Text += btn.Text;
         }
 
-        public int Division(int num1, int num2)
+        private void Nb4_Click(object sender, EventArgs e)
         {
-            int result = num1 / num2;
-            return result;
+            Button btn = (Button)sender;
+            txtPanel.Text += btn.Text;
+        }
+
+        private void Nb5_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            txtPanel.Text += btn.Text;
+        }
+
+        private void Nb6_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            txtPanel.Text += btn.Text;
+        }
+
+        private void Nb7_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            txtPanel.Text += btn.Text;
+        }
+
+        private void Nb8_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            txtPanel.Text += btn.Text;
+        }
+
+        private void Nb9_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            txtPanel.Text += btn.Text;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtPanel.Clear();
         }
     }
 }
