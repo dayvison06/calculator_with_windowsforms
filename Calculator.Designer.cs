@@ -96,7 +96,7 @@
             this.btnCross.FlatAppearance.BorderSize = 0;
             this.btnCross.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCross.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCross.Location = new System.Drawing.Point(231, 220);
+            this.btnCross.Location = new System.Drawing.Point(185, 220);
             this.btnCross.Name = "btnCross";
             this.btnCross.Size = new System.Drawing.Size(40, 36);
             this.btnCross.TabIndex = 5;
@@ -111,7 +111,7 @@
             this.btnDivision.FlatAppearance.BorderSize = 0;
             this.btnDivision.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDivision.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDivision.Location = new System.Drawing.Point(231, 262);
+            this.btnDivision.Location = new System.Drawing.Point(185, 263);
             this.btnDivision.Name = "btnDivision";
             this.btnDivision.Size = new System.Drawing.Size(40, 36);
             this.btnDivision.TabIndex = 6;
@@ -126,7 +126,7 @@
             this.btnResult.FlatAppearance.BorderSize = 0;
             this.btnResult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResult.Font = new System.Drawing.Font("Cascadia Code", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnResult.Location = new System.Drawing.Point(185, 220);
+            this.btnResult.Location = new System.Drawing.Point(231, 221);
             this.btnResult.Name = "btnResult";
             this.btnResult.Size = new System.Drawing.Size(40, 78);
             this.btnResult.TabIndex = 7;
