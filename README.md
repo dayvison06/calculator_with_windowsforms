@@ -8,7 +8,7 @@ Projeto realizado para explorar as possibilides dispostas pelo Windows Form na c
 
 # Build with: 
 
-<table align='center' width="100">
+<table align='left' width="100">
   <thead>
     <th>C#</th>
   </thead>
