@@ -8,9 +8,13 @@ Projeto realizado para explorar as possibilides dispostas pelo Windows Form na c
 
 # Build with: 
 
-<tr>
-  <td align='center' width="80">
-            <p>C#</p>
+<table align='center' width="100">
+  <thead>
+    <th>C#</th>
+  </thead>
+  <tbody>
+    <td align='center' width="80">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg">
           </td>
-</tr>
+  </tbody>
+</table>
