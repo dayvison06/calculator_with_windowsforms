@@ -282,6 +282,7 @@
             // 
             this.txtPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPanel.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPanel.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.txtPanel.Location = new System.Drawing.Point(26, 67);
             this.txtPanel.Multiline = true;
             this.txtPanel.Name = "txtPanel";
@@ -289,6 +290,7 @@
             this.txtPanel.Size = new System.Drawing.Size(245, 47);
             this.txtPanel.TabIndex = 21;
             this.txtPanel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPanel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPanel_KeyPress);
             // 
             // btnClear
             // 
@@ -334,6 +336,7 @@
             this.Name = "Calculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
+            this.Shown += new System.EventHandler(this.Calculator_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

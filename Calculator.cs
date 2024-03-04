@@ -7,7 +7,7 @@ namespace Calculator
     {
         public Calculator()
         {
-
+            
             InitializeComponent();
         }
 
@@ -104,7 +104,29 @@ namespace Calculator
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            // Clear panel
             txtPanel.Clear();
+
+            // focus in panel
+            txtPanel.Focus();
+        }
+
+        private void txtPanel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+            e.KeyChar != '*' && e.KeyChar != '-' && e.KeyChar != '/' && e.KeyChar != '+')
+            {
+
+                e.Handled = true;
+
+            }
+        }
+
+        private void Calculator_Shown(object sender, EventArgs e)
+        {
+            // Focuses in the panel when program is run for first time
+            txtPanel.Focus();
         }
     }
 }

@@ -1,4 +1,5 @@
 using Calculator;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Calculator
 {
@@ -14,10 +15,9 @@ namespace Calculator
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-
             Application.Run(new Calculator());
+                     
 
-            
         }
     }
 }
